@@ -49,7 +49,7 @@ st.markdown("Pourcentage de tests positifs: <span style='font-size:1.5em;'>%s</s
 # III. Interactive map
 st.markdown("---")#https://files.slack.com/files-pri/TBQ8Y1E2G-F05FUP579AP/download/challenges_2023_07_05_interactive_map.ipynb?origin_team=TBQ8Y1E2G
 st.subheader("Carte des cas positifs")
-shapefile = '03-Streamlit/app/ne_110m_admin_0_countries.shp'
+shapefile = 'app/ne_110m_admin_0_countries.shp'
 #Read shapefile using Geopandas
 #import os
 #print(os.getcwd())
@@ -60,7 +60,7 @@ gdf = gdf[gdf['country']=="Senegal"]
 grid_crs=gdf.crs
 gdf_json = json.loads(gdf.to_json())
 grid = json.dumps(gdf_json)
-cities = pd.read_csv("city_coordinates.csv", index_col=0)
+cities = pd.read_csv("app/city_coordinates.csv", index_col=0)
 def find_lat(x):
     try:
         return float(cities[cities['Ville'] == x]['Latitude'])
