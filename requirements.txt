@@ -1,0 +1,8 @@
+altair==5.0.1
+bokeh==2.4.3
+geopandas==0.13.2
+matplotlib==3.7.1
+numpy==1.24.3
+pandas==2.0.2
+Shapely==2.0.1
+streamlit==1.24.1
